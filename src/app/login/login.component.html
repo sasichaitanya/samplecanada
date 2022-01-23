@@ -12,12 +12,15 @@
                         <input type="email" class="form-control" [(ngModel)]="loginDetails.email" name="email" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
                     </div>
+                    <br>
                     <div class="form-floating">
                         <input type="password" class="form-control" [(ngModel)]="loginDetails.password" name="password" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
-
+                    <br>
                     <button class="w-100 btn btn-lg btn-primary" (click)="onSignIn()" type="submit">Sign in</button>
+                    <br><br>
+                    <button class="w-100 btn btn-lg btn-primary" (click)="register()" type="submit">Register</button>
                 </form>
             </main>
         </div>

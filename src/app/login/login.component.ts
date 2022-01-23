@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-sample',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   loginDetails: any;
 
-  constructor() { 
+  constructor(private router:Router) { 
     this.loginDetails = {
       email: '',
       password: '',
@@ -17,8 +19,19 @@ export class LoginComponent implements OnInit {
 
   onSignIn() {
     console.log('login details are ==========', this.loginDetails)
-    
-    debugger
+    // code here
+    if (sessionStorage.getItem('users')) {
+      // @ts-ignore
+      let users = JSON.parse(sessionStorage.getItem('users'))
+      // check users here 
+    } else {
+      alert('no users found')
+    }
+
+  }
+
+  register() {
+    this.router.navigateByUrl('register');
   }
 
   ngOnInit(): void {
