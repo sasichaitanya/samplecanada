@@ -1,7 +1,36 @@
-<h1>Users list</h1>
-<div *ngFor="let item of usersList">
-    <p>{{item.name}}</p>
-    <p>{{item.email}}</p>
-    <p>{{item.age}}</p>
-    <br><br>
+
+
+<div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+      <h1 class="bi bi-file-person text-center text-primary">Users list</h1>
+        <table class="table m-4 p-4 table-dark table-hover table-bordered border-light">
+            <thead>
+              <tr>
+                <th scope="col-md-3 "><span class="bi bi-file-person"></span> Name</th>
+                <th scope="col-md-3 "><span class="bi bi-envelope-check-fill"></span> Email</th>
+                <th scope="col-md-3 "><span class="bi bi-123"></span> age</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of usersList">
+              <tr>
+              
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.age}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="col-2"></div>
 </div>
+
+
+<!-- <div *ngFor="let item of usersList">
+    <p></p>
+    <p></p>
+    <p></p>
+    <br><br>
+</div> -->
