@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PubsubService } from './services/pubsub';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sample-canada';
+  constructor( private pubsubSvc: PubsubService) {
+  }
+
+  
 }
