@@ -13,70 +13,70 @@ export class ProductsComponent implements OnInit {
    this.productDetails=[{
      
     
-      "image": "C:\Users\shiva\angular\samplecanada\src\app\Images\Hp.jpg",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Hp",
       "price": "1500$",
       "id": "1",
       "rating": "5"
     },
     {
-      "image": "iphone image",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "iphone 12 pro max",
       "price": "1200$",
       "id": "2",
       "rating": "4.9"
     },
     {
-      "image": "water bottle",
+      "image": "water ../../assets/product-images/Hp.jpg",
       "name": "Tapperware bottle",
       "price": "20$",
       "id": "3",
       "rating": "4.8"
     },
     {
-      "image": "mouse",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Loggiestick mouse",
       "price": "120$",
       "id": "4",
       "rating": "4.5"
     },
     {
-      "image": "keypad",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Loggiestick keyboard",
       "price": "120$",
       "id": "5",
       "rating": "4.6"
     },
     {
-      "image": "pendrive",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "kingston",
       "price": "40$",
       "id": "6",
       "rating": "4.8"
     },
     {
-      "image": "Hardware",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Dell",
       "price": "50$",
       "id": "7",
       "rating": "4.4"
     },
     {
-      "image": "SSD",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Inspiron",
       "price": "100$",
       "id": "8",
       "rating": "4"
     },
     {
-      "image": "Ram",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Intell",
       "price": "150$",
       "id": "9",
       "rating": "4.2"
     },
     {
-      "image": "Mini",
+      "image": "../../assets/product-images/Hp.jpg",
       "name": "Google mini",
       "price": "80$",
       "id": "10",
