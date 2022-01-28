@@ -10,11 +10,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderNavbarComponent implements OnInit {
   isUserLoggedIn: boolean;
+  itemsAdded: number;
+
   constructor(private pubsubSvc: PubsubService, private router: Router) {
     this.isUserLoggedIn = false;
+    this.itemsAdded = 0;
+    this.subCartIncrement();
     this.subLoginStatus();
     this.checklogin();
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -30,19 +34,26 @@ export class HeaderNavbarComponent implements OnInit {
 
   subLoginStatus() {
     this.pubsubSvc.subLoginStatus()
-    .subscribe((result) => {
-      if (result === 'loggedIn') {
-        this.isUserLoggedIn = true;
-      } else {
-        this.isUserLoggedIn = false;
-      }
-    })
+      .subscribe((result) => {
+        if (result === 'loggedIn') {
+          this.isUserLoggedIn = true;
+        } else {
+          this.isUserLoggedIn = false;
+        }
+      })
   }
 
   logoff() {
     this.pubsubSvc.pubLoginStatus('loggedOff');
     this.router.navigateByUrl('login');
     sessionStorage.removeItem('loginstatus')
+  }
+
+  subCartIncrement() {
+    this.pubsubSvc.subIncCart()
+      .subscribe((result: any) => {
+        this.itemsAdded++;
+      })
   }
 
 }

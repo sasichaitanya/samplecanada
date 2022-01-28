@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
-
+import { Router } from '@angular/router'
+// services
+import { PubsubService } from '../services/pubsub';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -8,11 +9,11 @@ import {Router} from '@angular/router'
 })
 export class ProductsComponent implements OnInit {
 
-  productDetails:any;
-  constructor(private router:Router) { 
-   this.productDetails=[{
-     
-    
+  productDetails: any;
+  constructor(private router: Router, private pubSubSvc: PubsubService) {
+    this.productDetails = [{
+
+
       "image": "../../assets/product-images/Hp.jpg",
       "name": "Hp",
       "price": "1500$",
@@ -83,14 +84,15 @@ export class ProductsComponent implements OnInit {
       "rating": "4.8"
     }
 
-   
-   ]
 
+    ];
 
   }
-  
-  
 
+
+  addToCart(selectedItem: any) {
+    this.pubSubSvc.pubIncCart(selectedItem)
+  }
 
 
   ngOnInit(): void {

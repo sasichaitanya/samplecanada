@@ -17,10 +17,17 @@
                     <a class="nav-link" routerLink="/users">Users</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" routerLink="/liveproducts">Live Products</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">Cart Items {{itemsAdded}}</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" (click)="logoff()" >Logoff</a>
                 </li>
             </ul>
-            
         </div>
     </div>
 </nav>

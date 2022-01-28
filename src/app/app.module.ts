@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,9 +12,14 @@ import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 
 // services
 import { PubsubService } from './services/pubsub';
+import { ApiServices } from './services/api.service';
+// directives
+import { NumberOnlyDirective } from './directives/numberonly.directive';
+// components
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
+import { LiveProductsComponent } from './live-products/live-products.component';
 @NgModule({
   // components, pipes , directives
   declarations: [
@@ -23,17 +29,21 @@ import { UsersComponent } from './users/users.component';
     HeaderNavbarComponent,
     HomeComponent,
     ProductsComponent,
-    UsersComponent
+    UsersComponent,
+    LiveProductsComponent,
+    NumberOnlyDirective
   ],
   // modules
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, // ngmodel
+    HttpClientModule // rest api calls
   ],
   // services
   providers: [
-    PubsubService
+    PubsubService,
+    ApiServices
   ],
   bootstrap: [AppComponent]
 })

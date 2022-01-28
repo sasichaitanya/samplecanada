@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 export class PubsubService{
 
     loginStatus:Subject<any>=new Subject<any>();
-    // cartIncrement:Subject<any>=new Subject<any>();
+    cartIncrement:Subject<any>=new Subject<any>();
 
     constructor(){
 
@@ -22,11 +22,11 @@ export class PubsubService{
     }
 
 
-    // pubIncCart(inc:any){
-    //     this.cartIncrement.next(inc)
-    // }
-    // subIncCart(){
-    //     return this.cartIncrement.asObservable()
-    // }
+    pubIncCart(inc:any){
+        this.cartIncrement.next(inc)
+    }
+    subIncCart(){
+        return this.cartIncrement.asObservable()
+    }
 
 }

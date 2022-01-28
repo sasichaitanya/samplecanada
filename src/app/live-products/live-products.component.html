@@ -1,0 +1,32 @@
+
+
+<div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+      <h1 class="bi bi-file-person text-center text-primary">Products list</h1>
+        <table class="table m-4 p-4 table-dark table-hover table-bordered border-light">
+            <thead>
+              <tr>
+                <th scope="col-md-3 "><span class="bi bi-file-person"></span> Id</th>
+                <th scope="col-md-3 "><span class="bi bi-envelope-check-fill"></span> Email</th>
+                <th scope="col-md-3 "><span class="bi bi-123"></span> Fname</th>
+                <th scope="col-md-3 "><span class="bi bi-123"></span> Lname</th>
+                <th scope="col-md-3 "><span class="bi bi-123"></span> Avatar</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of productsList">
+              <tr>
+              
+                <td>{{item.id}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.first_name}}</td>
+                <td>{{item.last_name}}</td>
+                <td><img src="{{item.avatar}}" alt="asdf"></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="col-2"></div>
+</div>

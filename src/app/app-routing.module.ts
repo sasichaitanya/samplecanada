@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
+import { LiveProductsComponent } from './live-products/live-products.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,13 +14,14 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'liveproducts', component: LiveProductsComponent },
   {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
   },
   {
-    path: '**', 
+    path: '**',
     redirectTo: '/login',
     pathMatch: 'full'
   }
