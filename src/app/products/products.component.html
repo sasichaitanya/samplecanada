@@ -1,25 +1,29 @@
-
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 mb-3"   *ngFor="let item of productDetails">
-            <div class="card text-center border border-primary" style="width: 18rem;">
-                <img src="{{item.image}}"  alt="shiva">
-                <div class="card-body">
+  <div class="form-outline">
+    <input type="search" id="form1" placeholder="search products" (keypress)="searchProducts()" [(ngModel)]="productSearch" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let item of productDetails | FilterProduct: productSearch">
+      <div class="card text-center border border-primary" style="width: 18rem;">
+        <img src="{{item.image}}" alt="shiva">
+        <div class="card-body">
 
-                  <h5 class="card-title m-4"><span class="bi bi-list-stars text-secondary"> {{item.id}}</span> {{item.name}}</h5>
-                  
-                  <h6 class="card-subtitle m-4"><span class="bi bi-tags-fill text-primary"></span>{{item.price}}</h6>
-                
-                
-                    <h6 class="card-subtitle m-4"><span class="bi bi-star-half text-warning"></span>{{item.rating}}</h6>
-                
+          <h5 class="card-title m-4"><span class="bi bi-list-stars text-secondary"> {{item.id}}</span> {{item.name}}
+          </h5>
 
-                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                  <a class="btn btn-primary" (click)="addToCart(item)">Add To Cart</a>
-                </div>
-              </div>
+          <h6 class="card-subtitle m-4"><span class="bi bi-tags-fill text-primary"></span>{{item.price}}</h6>
+
+
+          <h6 class="card-subtitle m-4"><span class="bi bi-star-half text-warning"></span>{{item.rating}}</h6>
+
+
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a class="btn btn-primary" (click)="addToCart(item)">Add To Cart</a>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+      </div>
     </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+  </div>
 </div>

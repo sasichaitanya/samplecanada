@@ -10,10 +10,11 @@ import { PubsubService } from '../services/pubsub';
 export class ProductsComponent implements OnInit {
 
   productDetails: any;
+  productSearch: string;
   constructor(private router: Router, private pubSubSvc: PubsubService) {
+    this.productSearch = '';
+
     this.productDetails = [{
-
-
       "image": "../../assets/product-images/Hp.jpg",
       "name": "Hp",
       "price": "1500$",
@@ -63,7 +64,7 @@ export class ProductsComponent implements OnInit {
       "rating": "4.4"
     },
     {
-      "image": "../../assets/product-images/Hp.jpg",
+      "image": "../../assets/product-images/keyboard.png",
       "name": "Inspiron",
       "price": "100$",
       "id": "8",
@@ -98,4 +99,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchProducts() {
+    console.log('==================',this.productSearch)
+  }
 }

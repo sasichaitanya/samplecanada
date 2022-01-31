@@ -15,6 +15,8 @@ import { PubsubService } from './services/pubsub';
 import { ApiServices } from './services/api.service';
 // directives
 import { NumberOnlyDirective } from './directives/numberonly.directive';
+// pipes
+import { FilterProduct } from './pipes/filter-products';
 // components
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
@@ -31,7 +33,8 @@ import { LiveProductsComponent } from './live-products/live-products.component';
     ProductsComponent,
     UsersComponent,
     LiveProductsComponent,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    FilterProduct
   ],
   // modules
   imports: [
