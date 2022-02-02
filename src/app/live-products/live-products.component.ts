@@ -17,10 +17,13 @@ export class LiveProductsComponent implements OnInit {
   }
 
   getProducts() {
+    // enable loader
     this.apiSvc.getAq()
       .subscribe((result: any) => {
+        // disable loader
         this.productsList = result.data;
       }, err => {
+        // disable loader
         alert('Error while fetching the live products')
       })
   }

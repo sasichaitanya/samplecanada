@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { LiveProductsComponent } from './live-products/live-products.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
 @NgModule({
   // components, pipes , directives
   declarations: [
@@ -34,7 +35,8 @@ import { LiveProductsComponent } from './live-products/live-products.component';
     UsersComponent,
     LiveProductsComponent,
     NumberOnlyDirective,
-    FilterProduct
+    FilterProduct,
+    ChildComponentComponent
   ],
   // modules
   imports: [

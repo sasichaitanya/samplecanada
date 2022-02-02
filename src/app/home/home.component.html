@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div style="border: 2px solid green;">
+    <h1>Data Comming from child</h1>
+    ===={{dataFromChild}}====
+    <br>
+    <app-child-component (sendEvent)="receievedEvent($event)" [inputData]="homeData" [inputData1]="homeData"></app-child-component>
+    <br>
+</div>

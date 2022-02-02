@@ -1,0 +1,12 @@
+<div style="border: 1px solid blueviolet;">
+    <p>{{inputData.name}}</p>
+    <p>{{inputData.desc}}</p>
+    <br>
+    <p>{{inputData1.name}}</p>
+    <p>{{inputData1.desc}}</p>
+    <div class="form-outline">
+        <input type="search" id="form1" placeholder="Type here to pass to parent" [(ngModel)]="textInput"
+            (ngModelChange)="onChangeInput()" class="form-control" />
+        <!-- <label class="form-label" for="form1">Pass to Parent</label> -->
+    </div>
+</div>

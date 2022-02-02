@@ -9,12 +9,14 @@ import { UsersComponent } from './users/users.component';
 import { LiveProductsComponent } from './live-products/live-products.component';
 
 const routes: Routes = [
+  { path: 'moduleLoad', loadChildren: () => import('./submodule/submodule').then(m => m.SubModule)},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'liveproducts', component: LiveProductsComponent },
+  // ./universe/universe.module#UniverseModule
   {
     path: '',
     redirectTo: '/login',
